@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Personal Finance Manager</h1>
+        
+        <div class="summary">
+            <h3>Balance: $<span id="balance">0.00</span></h3>
+            <h4>Income: $<span id="total-income">0.00</span></h4>
+            <h4>Expenses: $<span id="total-expenses">0.00</span></h4>
+        </div>
+        
+        <div class="transaction-form">
+            <input type="text" id="description" placeholder="Description" required>
+            <input type="number" id="amount" placeholder="Amount" required>
+            <button id="add-transaction">Add Transaction</button>
+        </div>
+        
+        <h3>Transaction History</h3>
+        <table id="transaction-table">
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Amount</th>
+                    <th>Type</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="transaction-list">
+                <!-- Transactions will be appended here dynamically -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
